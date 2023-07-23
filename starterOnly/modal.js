@@ -108,3 +108,27 @@ resetError();
 
 })
 
+// vider les erreurs
+function resetError() {
+  document.querySelector("#first").parentElement.setAttribute("data-error", "")
+  document.querySelector("#first").parentElement.setAttribute("data-error-visible", false)
+
+  document.querySelector("#last").parentElement.setAttribute("data-error", "")
+  document.querySelector("#last").parentElement.setAttribute("data-error-visible", false)
+
+  document.querySelector("#email").parentElement.setAttribute("data-error", "")
+  document.querySelector("#email").parentElement.setAttribute("data-error-visible", false)
+
+  document.querySelector("#birthdate").parentElement.setAttribute("data-error", "")
+  document.querySelector("#birthdate").parentElement.setAttribute("data-error-visible", false)
+
+  document.querySelector("#quantity").parentElement.setAttribute("data-error", "")
+  document.querySelector("#quantity").parentElement.setAttribute("data-error-visible", false)
+
+  document.querySelector(".checkbox-input").parentElement.setAttribute("data-error", "")
+  document.querySelector(".checkbox-input").parentElement.setAttribute("data-error-visible", false)
+
+  document.querySelector("#checkbox1").parentElement.setAttribute("data-error", "")
+  document.querySelector("#checkbox1").parentElement.setAttribute("data-error-visible", false)
+}
+
