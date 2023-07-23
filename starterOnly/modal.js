@@ -132,3 +132,14 @@ function resetError() {
   document.querySelector("#checkbox1").parentElement.setAttribute("data-error-visible", false)
 }
 
+//check "prénom" data
+function FirstName () {
+  let regex = /^([a-zA-Z '\-éèêëçäàïÿ]+)$/;
+	let inputValue = document.getElementById("first").value;
+	if (inputValue !== null && inputValue.length > 2) {
+    return regex.test(inputValue);
+  }   
+	else {
+    return false;
+  }
+}
