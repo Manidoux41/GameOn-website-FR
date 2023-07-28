@@ -155,3 +155,15 @@ function LastName () {
     return false;
   }
 }
+
+//check "email" data
+function Email () {
+    let regex = /^([a-z0-9_\.-]+\@[\da-z\.-]+\.[a-z\.]{2,4})$/;
+    let inputValue = document.getElementById("email").value;
+    if (inputValue !== null){
+      return regex.test(inputValue);
+    }
+    else {
+      return false;
+    }
+}
