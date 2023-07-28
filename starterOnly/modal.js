@@ -167,3 +167,42 @@ function Email () {
       return false;
     }
 }
+
+//check "anniversaire" data
+function Birthdate () {
+  let inputValue = document.getElementById("birthdate").value;
+  if (inputValue !== ""){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+//check "tournois quantité" data
+function Quantity() {
+    let regex = /^[0-9]+$/;
+    let inputValue = document.getElementById("quantity").value;
+    if (inputValue !== null){
+      return regex.test(inputValue);
+    }
+    else {
+      return false;
+    }
+}
+
+//check "ville" radio
+function City() {
+    let radioButtons = document.querySelectorAll(".checkbox-input[type=radio]");
+    for(let radio of radioButtons){
+        if(radio.checked === true) 
+          return true;
+    }
+    return false;
+}
+
+//check "première checkbox"
+function Checkbox() {
+    let inputValue = document.getElementById("checkbox1").checked;
+    return inputValue;
+}
