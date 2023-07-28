@@ -143,3 +143,15 @@ function FirstName () {
     return false;
   }
 }
+
+//check "nom de famille" data
+function LastName () {
+  let regex = /^([a-zA-Z '\-éèêëçäàïÿ]+)$/;
+	let inputValue = document.getElementById("last").value;
+	if (inputValue !== null && inputValue.length > 2) {
+    return regex.test(inputValue);
+  }   
+	else {
+    return false;
+  }
+}
