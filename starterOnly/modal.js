@@ -28,10 +28,10 @@ function closeModal() {
 
 // fonction pour valider le formulaire
 document.querySelector("form").addEventListener("submit", (e) => {
-  // "annuler" le comportement par défaut
+  //previous "annuler" le comportement par défaut
   e.preventDefault();
-
-resetError();
+  // "annuler" le comportement par défaut
+  resetError();
   
 
   // vérifier un par un tous les champs
@@ -51,13 +51,14 @@ resetError();
     document.querySelector("form").style.display="none";
     let message=document.createElement("p");
     message.innerHTML="Merci ! Votre inscription est validée.";
-    message.style.color="red";
-    message.style.textAlign="center";
-    message.style.marginTop="100px";
-    message.style.marginBottom="100px";
-    message.style.marginRight="40px";
-    message.style.marginLeft="40px";
-    message.style.fontSize="25px";
+    message.classList.add('message');
+    // message.style.color="white";
+    // message.style.fontSize = "36px"
+    // message.style.textAlign="center";
+    // message.style.marginTop="100px";
+    // message.style.marginBottom="100px";
+    // message.style.marginRight="40px";
+    // message.style.marginLeft="40px";
     document.querySelector(".modal-body").appendChild(message);
   }
   // si j'ai au moins un faux

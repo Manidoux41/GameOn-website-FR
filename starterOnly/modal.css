@@ -527,3 +527,21 @@ footer {
   }
 }
 
+.message {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  line-height: 51px;
+  margin: 100px 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .message {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+  
+}
+
