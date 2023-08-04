@@ -20,10 +20,21 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+let message=document.createElement("p");
+
 // close modal
 document.querySelector(".close").addEventListener("click", closeModal);
 function closeModal() {
+  document.querySelector("form").style.display="block";
   modalbg.style.display = "none";
+  if(message.classList.contains('message')){
+    message.innerHTML="";
+    message.remove();
+    document.form["reserve"].reset();
+  }
+  // else {
+  //   document.form["reserve"].reset();
+  // }
 }
 
 // fonction pour valider le formulaire
@@ -49,7 +60,6 @@ document.querySelector("form").addEventListener("submit", (e) => {
   {
     // j'affiche le message de succès
     document.querySelector("form").style.display="none";
-    let message=document.createElement("p");
     message.innerHTML="Merci ! Votre inscription est validée.";
     message.classList.add('message');
     // message.style.color="white";
