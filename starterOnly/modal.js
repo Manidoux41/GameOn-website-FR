@@ -20,6 +20,7 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+let form = document.querySelector("form");
 let message=document.createElement("p");
 
 // close modal
@@ -30,11 +31,7 @@ function closeModal() {
   if(message.classList.contains('message')){
     message.innerHTML="";
     message.remove();
-    document.form["reserve"].reset();
-  }
-  // else {
-  //   document.form["reserve"].reset();
-  // }
+   }
 }
 
 // fonction pour valider le formulaire
@@ -62,14 +59,13 @@ document.querySelector("form").addEventListener("submit", (e) => {
     document.querySelector("form").style.display="none";
     message.innerHTML="Merci ! Votre inscription est validée.";
     message.classList.add('message');
-    // message.style.color="white";
-    // message.style.fontSize = "36px"
-    // message.style.textAlign="center";
-    // message.style.marginTop="100px";
-    // message.style.marginBottom="100px";
-    // message.style.marginRight="40px";
-    // message.style.marginLeft="40px";
     document.querySelector(".modal-body").appendChild(message);
+    form.first.value = "";
+    form.last.value = "";
+    form.email.value = "";
+    form.birthdate.value = "";
+    form.quantity.value = "";
+    uncheckLocation();
   }
   // si j'ai au moins un faux
   else
@@ -216,4 +212,13 @@ function City() {
 function Checkbox() {
     let inputValue = document.getElementById("checkbox1").checked;
     return inputValue;
+}
+
+function uncheckLocation(){
+  if(document.querySelector('#location1').checked == true) document.querySelector('#location1').checked = false;
+  if(document.querySelector('#location2').checked == true) document.querySelector('#location2').checked = false;
+  if(document.querySelector('#location3').checked == true) document.querySelector('#location3').checked = false;
+  if(document.querySelector('#location4').checked == true) document.querySelector('#location4').checked = false;
+  if(document.querySelector('#location5').checked == true) document.querySelector('#location5').checked = false;
+  if(document.querySelector('#location6').checked == true) document.querySelector('#location6').checked = false;
 }
